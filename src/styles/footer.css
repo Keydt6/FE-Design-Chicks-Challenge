@@ -1,0 +1,163 @@
+.App-Footer {
+  background-color: #282c34;
+  min-height: 30vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+footer {
+  width: 100%;
+  bottom: 0;
+  background-size: contain;
+  background-color: #303141;
+  z-index: -100;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+.box_money {
+  text-align: center;
+  padding: 0px 40px;
+}
+
+.money {
+  background: #262633;
+  list-style: none;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.money .normal img {
+  width: auto;
+  height: 80px;
+  margin-right: 16px;
+}
+
+.money .crypto img {
+  width: auto;
+  height: 20px;
+  margin: auto 8px auto 0;
+}
+
+.money .text {
+  font-size: 12px;
+  color: #ffffff8c;
+}
+
+.box__socials {
+  margin: auto;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box__socials hr {
+  border: none;
+  height: 2px;
+  background-color: #7a7a7a;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin: 0;
+}
+
+.socials img {
+  width: 28px;
+  margin: 15px 12px 15px 0;
+}
+
+.container__footer {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(5, 1fr);
+
+  margin-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.box__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: self-start;
+}
+
+.box__footer img {
+  width: auto;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.box__footer h2 {
+  margin: 12px 0 8px 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.box__footer p {
+  margin: 3px 0;
+  color: #fafcffb3;
+  font-weight: 300;
+  font-size: 10px;
+}
+
+.box__footer p.email {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.reviews {
+  display: inline;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: self-start;
+}
+
+.reviews img {
+  height: 20px;
+  width: auto;
+}
+
+.box__copyright {
+  margin: auto;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.box__copyright p {
+  color: #ffffffb6;
+  font-size: 14px;
+}
+
+@media (min-width: 1000px) {
+  header nav div.nav-left,
+  header nav div.nav-right {
+    display: flex !important;
+  }
+
+  header nav div.nav-burger {
+    display: none;
+  }
+}

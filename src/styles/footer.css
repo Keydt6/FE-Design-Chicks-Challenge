@@ -87,7 +87,7 @@ footer {
 .container__footer {
   display: grid;
   gap: 30px;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   margin-top: 30px;
   padding-left: 10%;
@@ -130,14 +130,14 @@ footer {
 .reviews {
   display: inline;
   display: flex;
-  flex-direction: column;
   justify-content: start;
-  align-items: self-start;
+  align-items: center;
 }
 
 .reviews img {
-  height: 20px;
-  width: auto;
+  height: auto;
+  width: 50px;
+  margin-right: 15px;
 }
 
 .box__copyright {
@@ -159,5 +159,11 @@ footer {
 
   header nav div.nav-burger {
     display: none;
+  }
+}
+
+@media (min-width: 720px) {
+  .container__footer {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

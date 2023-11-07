@@ -1,15 +1,14 @@
-
 # FE-Design-Chicks-Challenge
 
 Page design, made with react, vite, HTML and CSS.
 
-
 ## Features
 
 #### OVERVIEW
-Layout of the proposed design using React with vite, semantically correct HTML and CSS with 'mobile first' practice.
-## Project Folders
 
+Layout of the proposed design using React with vite, semantically correct HTML and CSS with 'mobile first' practice.
+
+## Project Folders
 
 #### Project folder structure
 
@@ -28,7 +27,21 @@ Layout of the proposed design using React with vite, semantically correct HTML a
     ├── vite.config.js         # Vite configuration file
     └── ...
 
+#### Source files
 
+Automated tests are usually placed into the `test` or, less commonly, into the `spec` or `tests` folder.
+
+    .
+    ├── ...
+    ├── src                    # Source files
+    │   ├── assets             # Resources
+    │   ├── components         # Reusable components
+    │   ├── hooks              # Custom hooks
+    │   ├── pages              # Defined pages of the application
+    │   ├── styles             # CSS files
+    │   ├── main.jsx           # Application startup file
+    │   └── ...
+    └── ...
 
 #### Automated tests
 
@@ -37,11 +50,9 @@ Automated tests are usually placed into the `test` or, less commonly, into the `
     .
     ├── ...
     ├── test                        # Test files
-    │   ├── App.test.jsx            # Load and stress tests
+    │   ├── App.test.jsx            # Load App
     │   └── ...
     └── ...
-
-
 
 #### Documentation files
 
@@ -55,8 +66,6 @@ or, less commonly, into the `doc` folder.
     │   ├── FE-Design-Chicks-Challenge-2022.pdf                 # Table of contents
     │   └── ...
     └── ...
-
-
 
 ## Installation and Run
 
@@ -75,7 +84,7 @@ Install with yarn
   yarn install
   yarn dev
 ```
-    
+
 ## Build
 
 Install with npm
@@ -91,7 +100,7 @@ Install with yarn
 ```bash
   yarn build
 ```
-    
+
 ## Running Tests
 
 Test making with vitest, happy-dom, @testing-library/react and user-event
@@ -108,12 +117,11 @@ or with yarn
 ```bash
   yarn test
 ```
+
 ## Tech Stack
 
 **Client:** React@18.2.0, vite@4.4.5, @vitejs/plugin-react, @vitejs/plugin-react-swc
 
-
 ## Authors
 
 - [@Keydt6](https://github.com/Keydt6)
-

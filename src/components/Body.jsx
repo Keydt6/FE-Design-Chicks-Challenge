@@ -3,148 +3,13 @@ import '../styles/body.css'
 import CardAdd from './CardAdd'
 import Pagination from './Pagination'
 
-const cards = [
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  },
-  {
-    on_sale: 1,
-    in_stock: 1,
-    src: 'images/escudo.jpg',
-    titulo: 'tailored_Jeans',
-    price: 19.99,
-    price_stock: 1,
-    descripcion: 'Some_text'
-  }
-]
+import useData from '../hooks/useData'
 
 function Body() {
+  const { cards } = useData()
   return (
     <div className='container-body'>
-      <h3 className='tittle'>Condimentum consectectur</h3>
+      <h3 className='title'>Condimentum consectectur</h3>
 
       <div className='barra'>
         <select className='select_game'>
@@ -161,8 +26,9 @@ function Body() {
           <option> all</option>
         </select>
       </div>
+
       <div className='container'>
-        <div className='text-filter'>
+        <div>
           <ul className='list-filter'>
             <li>
               {' '}
@@ -175,11 +41,13 @@ function Body() {
             </li>
           </ul>
         </div>
+
         <div className='container-card'>
           {cards.map((card, idx) => (
             <CardAdd key={idx} title={card.titulo} price={card.price} />
           ))}
         </div>
+
         <Pagination />
       </div>
     </div>

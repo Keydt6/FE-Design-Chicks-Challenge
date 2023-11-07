@@ -1,5 +1,3 @@
-import { ReactComponent as YoutubeIcon } from '../images/youtube-icon.svg'
-
 function PaymentIcons() {
   return (
     <div>

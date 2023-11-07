@@ -1,18 +1,18 @@
-/* titulo*/
-.tittle {
-  margin-top: 50px;
-  font-size: 30px;
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: start;
   color: #fff;
-  margin-left: 5%;
+  width: 80%;
+  margin: 70px 10% 0px;
 }
-
-/* Barra entre titulo y container de cards*/
 
 .barra {
   margin-left: 10%;
   margin-right: 10%;
   width: 80%;
 }
+
 .search,
 .select_game,
 .select_price,
@@ -20,13 +20,14 @@
 .select-filter {
   box-sizing: border-box;
   border: 1px #ccc;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 16px;
   background-position: 10px 10px;
   background-repeat: no-repeat;
   background-size: 20px;
   padding: 12px 20px 12px 40px;
-  color: #ccc;
+  color: #ffffffcf;
+  text-wrap: nowrap;
 }
 
 .container-body {
@@ -37,7 +38,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,42 +45,48 @@
   background-size: cover;
   position: cover;
 }
+
 .select_game {
   background-image: url('../../public/images/espada.png');
-  background-color: #303141;
+  background-color: #4c60855c;
   width: 24%;
   margin-right: 2%;
 }
+
 .search {
   background-image: url('../../public/images/lupa1.png');
-  background-color: #303141;
+  background-color: #4c60855c;
   width: 50%;
 }
+
+.search::placeholder {
+  color: #ffffffcf;
+}
+
 .select_price {
   background-image: url('../../public/images/bolsa-de-dinero.png');
-  background-color: #303141;
+  background-color: #4c60855c;
   width: 12%;
+  border-right: 1px solid #39e29d;
 }
+
 .select_type {
   background-image: url('../../public/images/pluma.png');
-  background-color: #303141;
+  background-color: #4c60855c;
   width: 12%;
 }
-/* Container para cards*/
+
 .container {
+  width: -webkit-fill-available;
   background-color: #303141;
   height: auto;
   align-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 10px;
-  border: 4px #ccc;
-  margin-bottom: 40px;
-  padding-right: 20px;
+  margin: 20px 10% 60px;
+  border: 1px solid #494c85;
+  border-radius: 4px;
+  padding: 0 30px;
   padding-bottom: 30px;
 }
-
-/* Select para filtrar*/
 
 .list-filter {
   background: #303141;
@@ -91,34 +97,78 @@
   margin-left: 40px;
   margin-right: 40px;
   color: #fff;
-  padding-top: 30px;
+  margin: 2rem 0;
+}
+
+.list-filter li p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffffcf;
 }
 
 .select-filter {
-  /* background-image: url('../../public/images/armadura1.jpg'); */
+  background-image: url('../../public/images/filtrar.png');
   background-color: #4c608526;
 }
 
-/* Card*/
-
 .container-card {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 10px;
   width: 100%;
-  height: auto;
+  height: auto; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 15px;
 }
 
 .card {
   width: auto;
-  margin: auto;
   background: #4c608526;
   display: flex;
   flex-direction: column;
   color: #fff;
   padding: 15px;
-  margin-top: 20px;
+}
+
+.onsale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-left: -50px !important; */
+  font-size: 10px;
+}
+
+.onsale .status p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.stock {
+  font-size: 10px;
+  padding: 1px 6px !important;
+  border: 1px solid #39e29d;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 500;
+  color: #39e29d;
+}
+
+.b {
+  color: #39e29d;
+  font-size: 20px;
+  vertical-align: middle;
+  line-height: 0;
+}
+
+.input-a {
+  background-color: #4c608533 !important;
+  width: 50px;
+  border: 5px white !important;
+  color: #ddd;
+  float: right;
 }
 
 .on {
@@ -126,39 +176,57 @@
   justify-content: space-between;
   background-color: #4c608526;
 }
-.onsale {
-  margin-left: -50px !important;
-  font-size: 10px;
-}
-.b {
-  color: #00ff80;
-  font-size: 20px;
-}
-
-.stock {
-  font-size: 12px;
-  width: 70px;
-  height: 30px;
-  border: 1px solid #00ff80;
-  text-align: center;
-  margin-left: 10px;
-  font-weight: 500;
-  color: #00ff80;
-  margin-top: -25px;
-}
 
 .card img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   text-align: left;
-  margin-left: 10px;
-  margin-top: 20px;
+  margin-right: auto;
+  margin: 10px 0;
 }
 
-.card h1 {
-  font-size: 15px;
-  margin-left: 10px;
-  margin-bottom: 0px;
+.card .card-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.card .card-name i {
+  color: #39e29d;
+  font-size: 18px;
+}
+
+.card .card-name h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.card-price {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.price {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin-right: 12px;
+}
+
+.price-touch {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 01px;
+  color: gray !important;
+  text-decoration: line-through #ff0000 !important;
+}
+
+.list-price {
+  list-style: none;
+  background-color: #4c608526;
 }
 
 .card input {
@@ -172,29 +240,14 @@
   background-color: #4c608526;
 }
 
-.card p {
-  margin-left: 10px;
-  margin-right: 10px;
+.card-description {
+  margin: 0px 0 12px;
+  font-size: 10px;
+  text-align: left;
+  color: #ffffffbf;
 }
 
-.list-price {
-  list-style: none;
-  background-color: #4c608526;
-}
-
-.price,
-.price-touch {
-  color: white;
-  font-size: 18px;
-  margin-left: 20px;
-}
-.price-touch {
-  color: gray !important;
-  text-decoration: line-through #ff0000 !important;
-  font-size: 13px;
-}
-
-.card button {
+/* .card button {
   border: none;
   outline: 0;
   padding: 10px;
@@ -206,20 +259,42 @@
   width: auto;
   font-size: 15px;
   margin-left: 10px;
+} */
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn {
   background-color: #5380ac;
   border: none;
+  border-radius: 4px;
   color: white;
-  padding: 12px 16px;
-  font-size: 16px;
+  padding: 0px 8px;
+  height: 40px;
+  width: 90px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: unset !important;
   cursor: pointer;
   margin-right: 10px;
+  box-sizing: border-box;
 }
 
-.btn-cancel {
-  opacity: 0.2;
+.btn-details {
+  background-color: #3f4254;
+}
+
+.btn-add {
+  background-color: #5762d5;
+}
+
+.btn-add i {
+  padding: 8px;
+  background-color: #454da8;
+  border-radius: 3px;
+  margin-left: 4px;
 }
 
 /* Darker background on mouse-over */
@@ -251,15 +326,17 @@
   text-decoration: none;
   transition: background-color 0.3s;
   margin: 0 4px;
+  border-radius: 4px;
 }
 
-.pagination a.next {
+.pagination a.next,
+.pagination a.prev {
   float: left;
   padding: 8px 16px;
   text-decoration: none;
   transition: background-color 0.3s;
-  margin: 0 4px;
-  border: 1px solid #ddd;
+  margin: 0 12px;
+  border: 1px solid #5762d5;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
   -ms-transition: background-color 0.3s;
@@ -267,27 +344,25 @@
 }
 
 .pagination a.active {
-  background-color: #5380ac;
+  background-color: #5762d5;
   color: white;
-  border: 1px solid #5380ac;
+  border: 1px solid #5762d5;
 }
 
 .pagination a:hover:not(.active) {
-  background-color: #ddd;
+  background-color: #4c608566;
 }
 
-.input-a {
-  background-color: #4c608533 !important;
-  width: 50px;
-  border: 5px white !important;
-  color: #ddd;
-  float: right;
-  margin-top: 15px;
+.pagination a.next:hover,
+.pagination a.prev:hover {
+  background-color: #5762d5;
 }
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   opacity: 1;
 }
+
 .text-description {
   vertical-align: inherit;
   color: #767171;
